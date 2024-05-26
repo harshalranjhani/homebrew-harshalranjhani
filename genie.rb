@@ -5,11 +5,11 @@
 class Genie < Formula
   desc ""
   homepage "https://github.com/harshalranjhani/genie"
-  version "1.4.4"
+  version "1.4.5"
 
   on_macos do
-    url "https://github.com/harshalranjhani/genie/releases/download/v1.4.4/genie_Darwin_all.tar.gz"
-    sha256 "9825e4fad0345c64ed32f9e4798b80e783aef496af76eb10cd1f81b6eb9f6779"
+    url "https://github.com/harshalranjhani/genie/releases/download/v1.4.5/genie_Darwin_all.tar.gz"
+    sha256 "2b8ce3add03ffe6e8f353fdd259c2f9629b4f68d4075a0022f7e236c38c4fdba"
 
     def install
       bin.install "genie"
@@ -17,20 +17,24 @@ class Genie < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/harshalranjhani/genie/releases/download/v1.4.4/genie_Linux_arm64.tar.gz"
-      sha256 "f440b5040dedf58a0af06a9fe82cc0afc6ce4e2a8ae6b3e133bafeb5e668d35c"
+    on_intel do
+      if Hardware::CPU.is_64_bit?
+        url "https://github.com/harshalranjhani/genie/releases/download/v1.4.5/genie_Linux_x86_64.tar.gz"
+        sha256 "61bbbf1fa85710dedd210bec83b4728929bd7d14d784dbfe80e617b9cf324e32"
 
-      def install
-        bin.install "genie"
+        def install
+          bin.install "genie"
+        end
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/harshalranjhani/genie/releases/download/v1.4.4/genie_Linux_x86_64.tar.gz"
-      sha256 "2062fa5c4221a6be8edf86b2f24641b72e9f88c55eadb80b1a6bab983c63d09e"
+    on_arm do
+      if Hardware::CPU.is_64_bit?
+        url "https://github.com/harshalranjhani/genie/releases/download/v1.4.5/genie_Linux_arm64.tar.gz"
+        sha256 "b82c56bfadff87186d68a16294502562fbf7666b8eb99678b31c139242de8d26"
 
-      def install
-        bin.install "genie"
+        def install
+          bin.install "genie"
+        end
       end
     end
   end
