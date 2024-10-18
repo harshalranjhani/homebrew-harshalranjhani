@@ -5,11 +5,11 @@
 class Genie < Formula
   desc ""
   homepage "https://genie.harshalranjhani.in"
-  version "2.7.2"
+  version "2.7.3"
 
   on_macos do
-    url "https://github.com/harshalranjhani/genie/releases/download/v2.7.2/genie_Darwin_all.tar.gz"
-    sha256 "a00aad2476abbe0b3508d97bc0a0079ef1d97bd20853a865b708c1741191e378"
+    url "https://github.com/harshalranjhani/genie/releases/download/v2.7.3/genie_Darwin_all.tar.gz"
+    sha256 "7863b8cb6308321e7ee111186736071000aac83f87a15d8bbdc673f69e825994"
 
     def install
       bin.install "genie"
@@ -19,8 +19,8 @@ class Genie < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/harshalranjhani/genie/releases/download/v2.7.2/genie_Linux_x86_64.tar.gz"
-        sha256 "588b5f0de278af6fc864f37cc463632c1c0b2f928c8c62149846f11cd25b9619"
+        url "https://github.com/harshalranjhani/genie/releases/download/v2.7.3/genie_Linux_x86_64.tar.gz"
+        sha256 "821b4152d1c5443b23ca5b0f045173e9ee121e1f2459e3a7b3fb09889b7358e0"
 
         def install
           bin.install "genie"
@@ -29,8 +29,8 @@ class Genie < Formula
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/harshalranjhani/genie/releases/download/v2.7.2/genie_Linux_arm64.tar.gz"
-        sha256 "be124a9ccdc560e33627c3b0c8a0a9f1eb3e8c375db94a2b54ebc3e5ae523552"
+        url "https://github.com/harshalranjhani/genie/releases/download/v2.7.3/genie_Linux_arm64.tar.gz"
+        sha256 "22e05b77c33bb42147b640acca284645373bb2270bed12521f69b1af2b839828"
 
         def install
           bin.install "genie"
