@@ -5,11 +5,11 @@
 class Stashr < Formula
   desc ""
   homepage "https://stashr.harshalranjhani.in"
-  version "0.0.2"
+  version "0.0.3"
 
   on_macos do
-    url "https://github.com/harshalranjhani/stashr/releases/download/v0.0.2/stashr_0.0.2_Darwin_all.tar.gz"
-    sha256 "cc2c3791209d9899072f26e22950f5d27ff342cdf3595faf1497728156ae5598"
+    url "https://github.com/harshalranjhani/stashr/releases/download/v0.0.3/stashr_0.0.3_Darwin_all.tar.gz"
+    sha256 "f478795ab7f7efeeab87d895f50dfe51f41c956af8ddbb60e9221c0ee62fa2e1"
 
     def install
       bin.install "stashr"
@@ -18,15 +18,15 @@ class Stashr < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/harshalranjhani/stashr/releases/download/v0.0.2/stashr_0.0.2_Linux_x86_64.tar.gz"
-      sha256 "7512f2e1b59ebeb4be0c3eb9347952205056f7721b4e7c128ad89ef7c76ceffc"
+      url "https://github.com/harshalranjhani/stashr/releases/download/v0.0.3/stashr_0.0.3_Linux_x86_64.tar.gz"
+      sha256 "6b8c3bb1e3f941b6bcd3d2b21844a1940c1869d5e0a92f70dc43edc7463286e7"
       def install
         bin.install "stashr"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/harshalranjhani/stashr/releases/download/v0.0.2/stashr_0.0.2_Linux_arm64.tar.gz"
-      sha256 "8266fce3ab3e1a3af23c44e46eb99f695a9d6f6d1fc02129e4d5bddf87d5ec30"
+      url "https://github.com/harshalranjhani/stashr/releases/download/v0.0.3/stashr_0.0.3_Linux_arm64.tar.gz"
+      sha256 "f089ff586077e9491cda09379456eafa649c29b3a75e59e29d9647e69d7ffbff"
       def install
         bin.install "stashr"
       end
