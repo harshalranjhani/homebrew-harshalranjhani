@@ -5,7 +5,7 @@
 class Handybox < Formula
   desc "Connect a Linux server to Handybox as your own box"
   homepage "https://handybox.cloud"
-  version "0.2.0"
+  version "0.2.1"
   license :cannot_represent
 
   PUBLIC_KEY = "RWSHAPpzFuRqT8HiJahooV0GMPeedA6SyRANSdPOHyMVAM/x6ZtEU9OT".freeze
@@ -15,32 +15,32 @@ class Handybox < Formula
 
   on_linux do
     if Hardware::CPU.arm?
-      url "https://github.com/harshalranjhani/handybox-releases/releases/download/daemon-v0.2.0/handybox-daemon-linux-arm64"
-      sha256 "b5ff30d9c58cbbfb8a8e196d8cd3db75b9c27688e5329e585700d045d8eeb3a8"
+      url "https://github.com/harshalranjhani/handybox-releases/releases/download/daemon-v0.2.1/handybox-daemon-linux-arm64"
+      sha256 "8dff41cc704bd614e2ff24bbda2777e83ff541bcd9c7a716bfc24d84996b7d44"
     else
-      url "https://github.com/harshalranjhani/handybox-releases/releases/download/daemon-v0.2.0/handybox-daemon-linux-amd64"
-      sha256 "e4d1762f1a39d6ce60c549b7c1b19015a3408882d281716418a0879b25a55037"
+      url "https://github.com/harshalranjhani/handybox-releases/releases/download/daemon-v0.2.1/handybox-daemon-linux-amd64"
+      sha256 "f5b2a825a5d025c54edcdf39eeea4f86c33618e5542a60caec2033ab8ea7d4e1"
     end
   end
 
   resource "signature-amd64" do
-    url "https://github.com/harshalranjhani/handybox-releases/releases/download/daemon-v0.2.0/handybox-daemon-linux-amd64.minisig"
-    sha256 "21989c1b81735cce77b27fcf5c82f6fd3dd17a7cfdc9aa687405bbf2b68cca7a"
+    url "https://github.com/harshalranjhani/handybox-releases/releases/download/daemon-v0.2.1/handybox-daemon-linux-amd64.minisig"
+    sha256 "62351bfd6e60c2c64aeace3b9c1890aadc80a9e1f9226eed87440af3b9754762"
   end
 
   resource "signature-arm64" do
-    url "https://github.com/harshalranjhani/handybox-releases/releases/download/daemon-v0.2.0/handybox-daemon-linux-arm64.minisig"
-    sha256 "4397530d224250916617414fcf499e8aed9e634d4abd2718090c4a6efe764e3f"
+    url "https://github.com/harshalranjhani/handybox-releases/releases/download/daemon-v0.2.1/handybox-daemon-linux-arm64.minisig"
+    sha256 "3d66f8ea37543d6e96729cd314857e8de9db3f44685239d37e7bd47c5cff94c1"
   end
 
   resource "installer" do
-    url "https://github.com/harshalranjhani/handybox-releases/releases/download/daemon-v0.2.0/install.sh"
-    sha256 "cfbe9578d0ebd2d4a83c3094c0a469fed33ea7667b8d3be3ef9913179007cf81"
+    url "https://github.com/harshalranjhani/handybox-releases/releases/download/daemon-v0.2.1/install.sh"
+    sha256 "85f9d90d1205075f96f1904da65ae0811fed2504988bf482a153eb2cb64216db"
   end
 
   resource "installer-signature" do
-    url "https://github.com/harshalranjhani/handybox-releases/releases/download/daemon-v0.2.0/install.sh.minisig"
-    sha256 "10810b90f25910ccb919a7ee155d346e9142728d080e70e2657981393ba3a15f"
+    url "https://github.com/harshalranjhani/handybox-releases/releases/download/daemon-v0.2.1/install.sh.minisig"
+    sha256 "57a1638648ecf44b9cbebb5767df91f8b16d7782d2ff4ad7487d41391841d534"
   end
 
   def install
